@@ -76,16 +76,16 @@ public class RecursiveSorter {
 	            k++;
 	        }
 	    }
-	 void mergesort(IntegerArray array, int l, int r)
+	 void mergesort(IntegerArray array, int left, int right)
 	    {
-	        if (l < r) {
+	        if (left < right) {
 
-	            int m =l+ (r-l)/2;
+	            int m =left+ (right-left)/2;
 	  
-	            mergesort(array, l, m);
-	            mergesort(array, m + 1, r);
+	            mergesort(array, left, m);
+	            mergesort(array, m + 1, right);
 	  
-	            merge(array, l, m, r);
+	            merge(array, left, m, right);
 	        }
 	    }
 
